@@ -1,0 +1,16 @@
+.create{
+    margin: 50px auto;
+    width: 80%;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create button{
+    background-color: rgb(238,116,25);
+    color: white;
+    width: 10%;
+    height: 20%;
+}

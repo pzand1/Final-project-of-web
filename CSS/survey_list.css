@@ -1,0 +1,81 @@
+.basic{
+    margin: 100px auto;
+    width: 70%;
+}
+
+.basic .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basic .content  li {
+    list-style-type:none;
+    display: inline;
+}
+
+.head button{
+    background-color: rgb(238,116,25);
+    color: white;
+    width: 120px;
+    height: 30px;
+}
+
+.content{
+    background-color: white;
+    height: 200px;
+    padding: 20px;
+}
+
+.content button{
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+}
+
+ ul:active{
+    background-color: rgb(#FCF0E5);
+}
+
+hr{
+    margin: 10px;
+}
+/* .content li{
+    display: flex;
+    justify-content: space-between;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input{
+    appearance: none;/* 清除掉自带的样式 */
+    width: 10px;
+    height: 10px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 10px;
+    border-radius: 50%;
+}
+input:after{
+    content: '\2714';
+    color: transparent;
+}
+input:checked::after{
+    color: black;
+}
