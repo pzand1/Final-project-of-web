@@ -1,3 +1,7 @@
+body{
+    min-width:1024px;
+}
+
 .basic{
     margin: 100px auto;
     width: 80%;
@@ -56,8 +60,9 @@
 }
 
 .content ul li span{
-    display: inline-block;
+    /* display: inline-block; */
     width: 20%;
+    float: left;
 }
 .content ul div{
     display: inline-block;
@@ -100,6 +105,8 @@ input{
     line-height: 10px;
     border-radius: 50%;
     margin-right: 20px;
+    float: left;
+    transform: translateY(50%); /*设置居中*/
 }
 input:after{
     content: '\2714';
