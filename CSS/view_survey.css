@@ -1,0 +1,118 @@
+body{
+    font-weight: 200px;
+    background-color: rgb(143, 143, 143);
+    color: rgb(#000000,0.5);
+    font-size: 15px;
+}
+
+.back1{
+    font-weight: 500px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.content{
+    position: absolute;
+    top: 30px;
+    margin: auto;
+    width: 50%;
+    height: 830px;
+    background-color:white;
+    padding: 30px;
+    border: 2px solid rgb(143, 143, 143,0.5);
+    border-radius: 5px;
+    position: relative;
+    overflow-y: auto;
+}
+
+h2,p{
+    margin-bottom: 1px;
+    color:#565656; 
+    text-align: center;
+}
+
+hr{
+    margin: 10px;
+}
+
+.box{
+    border: 2px solid rgb(143, 143, 143,0.8);
+    margin: 15px;
+    padding: 20px 20px 0px 20px;
+}
+
+.number{
+    width: 40px;
+    height: 100%;
+    float: left;
+}
+
+.type{
+    width: 50px;
+    height: 100%;
+    float: left;
+    padding-bottom: 10px;
+}
+
+.date{
+    width: 300px;
+    height: 100%;
+    float: right;
+}
+
+.one{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.big{
+    display: inline-block;
+    width: 70%;
+    height: 15px;
+    background-color: white;
+    border: 2px solid rgb(143, 143, 143,0.8);
+    border-radius: 2px;
+}
+
+.one .have{
+    margin-left: -1px;
+    margin-top: -1px;
+    width: 85%;
+    height: 110%;
+    background-color: rgb(238,116,25);
+    border-radius:2px;
+}
+.two .have{
+    margin-left: -1px;
+    margin-top: -1px;
+    width: 15%;
+    height: 110%;
+    background-color: rgb(238,116,25);
+    border-radius:2px;
+}
+.one span{
+    width: 15%;
+    height: 100%;
+}
+
+
+.back2{
+    font-weight: 500px;
+    width: 100px;
+    height: 30px;
+    background-color:rgb(238,116,25);
+    border-radius: 2px;
+    color: white;
+    border:1px solid black;
+    position: relative;
+    left: 45%;
+}
+
+
+.type span{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
