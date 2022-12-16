@@ -31,16 +31,37 @@
             <button><span class="iconfo nt icon-jiahao_o jiahao"></span> 新建问卷</button>
         </div>
         <div class="content">
-            <!-- 一个ul是一个问卷 -->
-            <ul>
-                <input type="checkbox"> 
+            <!-- 一个ul是一个问卷,下面加个hr横线 -->
+            <!-- publish是为了便于js修改，发布中就改颜色，未发布不变色 -->
+            <ul > 
                 <li>
+                    <input type="checkbox">
                     <span>这是我的第一份问卷</span>
                     <span>2022.12.15</span>
-                    <span> 未发布</span>
+                    <span class="publish"> 未发布</span>
                 </li>
-                <hr>
+                <div>
+                    <button>编辑</button>
+                    <button>删除</button>
+                    <button class="delete">查看数据</button>
+                </div>
             </ul>
+            <hr>
+            <ul> 
+                <li>
+                    <input type="checkbox">
+                    <span>这是我的第一份问卷</span>
+                    <span>2022.12.15</span>
+                    <span class="publish"> 未发布</span>
+                </li>
+                <div>
+                  
+                    <button>编辑</button>
+                    <button>删除</button>
+                    <button class="delete">查看数据</button>
+                </div>
+            </ul>
+            <hr>
             <input type="checkbox"> <li>全选</li>
             <button>删除</button>
         </div>
