@@ -15,7 +15,7 @@
     <!-- 导航栏 -->
     <div class="nav">
         <span class="spacer"></span>
-        <span class="iconfont icon-iconfontwenhao1 wenhao3"></span>
+        <span class="iconfont icon-iconfontwenhao1 wenhao1"></span>
         <span class="title1"><b> 问卷管理</b></span>
         <span class="spacer"></span>
         <span class="title2">我的问卷</span>
@@ -28,13 +28,13 @@
             <span>时间</span>
             <span>状态</span>
             <span>操作</span>
-            <button><span class="iconfo nt icon-jiahao_o jiahao"></span> 新建问卷</button>
+            <button><span class="iconfont icon-jiahao_o jiahao"></span> 新建问卷</button>
         </div>
         <div class="content">
             <!-- 一个ul是一个问卷,下面加个hr横线 -->
             <!-- publish是为了便于js修改，发布中就改颜色，未发布不变色 -->
             <ul > 
-                <li>
+                <li id="first">
                     <input type="checkbox">
                     <span>这是我的第一份问卷</span>
                     <span>2022.12.15</span>
@@ -43,7 +43,7 @@
                 <div>
                     <button>编辑</button>
                     <button>删除</button>
-                    <button class="delete">查看数据</button>
+                    <button>查看数据</button>
                 </div>
             </ul>
             <hr>
@@ -58,12 +58,18 @@
                   
                     <button>编辑</button>
                     <button>删除</button>
-                    <button class="delete">查看数据</button>
+                    <button>查看数据</button>
                 </div>
             </ul>
             <hr>
-            <input type="checkbox"> <li>全选</li>
-            <button>删除</button>
+            <!-- 下面是全选部分和删除 -->
+            <ul>
+                <li>
+                    <input type="checkbox" class="select"> <li>全选</li>
+                    <button id="deleteAll">删除</button>
+                </li>
+            </ul>
+            
         </div>
     </div>
 </body>
