@@ -74,6 +74,8 @@ table span {
 }
 .fun input {
   margin: 0 1.34rem;
+  border-radius: 50%;
+  border: 1px solid #999;
 }
 .fun .delete {
   height: 1.5rem;
