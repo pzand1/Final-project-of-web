@@ -1,0 +1,201 @@
+@main_wigth: 70vw;
+@header_heght: 45px;
+@context_height: 25px;
+@context_indent: 20px;
+@firstDivHeight: 45px;
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: rgb(239, 239, 239);
+}
+
+.nav {
+    height: 35px;
+    background-color: rgb(238, 116, 25);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+
+    .spacer {
+        width: 5%;
+    }
+}
+
+main {
+    max-width: 900px;
+    min-width: 600px;
+    width: @main_wigth;
+    margin: 0 auto;
+    padding: @context_height;
+    background-color: white;
+
+    header {
+        margin: 0 @context_indent;
+        height: @header_heght;
+        line-height: @header_heght;
+        text-align: center;
+
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+}
+
+.hr {
+    padding-top: @context_height;
+    border-bottom: 2px solid rgb(204, 204, 204);
+}
+
+.box_style {
+    border: 1px solid rgb(208, 210, 211);
+}
+
+.bottom:hover {
+    cursor: pointer;
+    background-color: rgb(254, 241, 232);
+}
+//添加问卷
+.choose {
+    margin: @context_height @context_indent 0;
+    border: 1px solid rgb(204, 204, 204);
+    height: 140px;
+    text-align: center;
+
+    .choose_bottom {
+        margin: 19px 0;
+        display: flex;
+        justify-content: center;
+
+        div {
+            margin: 0 19px;
+            width: 10.73%;
+            height: 35px;
+            line-height: 35px;
+            background-color: rgb(239, 239, 239);
+            cursor: pointer;
+        }
+    }
+
+    .add_bottom {
+        width: 100%;
+        height: 67px;
+        line-height: 67px;
+        background-color: rgb(239, 239, 239);
+        cursor: pointer;
+    }
+}
+//保存修改功能
+.last {
+    width: 100%;
+    height: 30px;
+    margin: 30px 0;
+
+    .time_digit {
+        width: 15vw;
+        height: @firstDivHeight;
+        margin-left: 20%;
+        padding: 0 20px;
+        line-height: @firstDivHeight;
+        background-color: white;
+        float: left;
+        position: relative;
+
+        .position_p {
+            position: absolute;
+            left: -110px;
+        }
+    }
+
+    div:nth-child(2) {
+        margin: 10px 10% 0 0;
+        width: 11%;
+        height: 30px;
+        background-color: rgb(238, 116, 25);
+        color: white;
+        line-height: 30px;
+        text-align: center;
+        float: right;
+    }
+
+    div:nth-child(3) {
+        margin: 10px 3% 0 0;
+        width: 11%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        float: right;
+    }
+}
+
+// 问卷题
+.select {
+    margin: 5px 20px 0 6%;
+    position: relative;
+}
+// 问卷题号
+.number {
+    width: 6%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+    left: -6%;
+}
+// 问卷题目
+.headContext {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+
+    .context {
+        font-size: 1.2rem;
+        font-weight: 600;
+        float: left;
+    }
+
+    .must_choose {
+        font-size: 0.9rem;
+        font-weight: normal;
+        float: right;
+    }
+}
+// 问卷内容
+.aLineContext {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.9rem;
+}
+
+textarea {
+    width: 100%;
+    height: 8rem;
+    font-size: 0.9rem;
+    resize: none;
+    outline: none;
+}
+// 题目功能栏
+.funtionMenu ul {
+    height: 20px;
+    line-height: 20px;
+    font-size: 0.7rem;
+    li {
+        text-align: center;
+        width: 5.5%;
+        float: right;
+        &:hover {
+            background-color: rgb(238, 116, 25);
+            cursor: pointer;
+        }
+    }
+}

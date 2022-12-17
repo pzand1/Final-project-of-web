@@ -11,18 +11,19 @@ main {
   width: 30vw;
   margin: 0 auto;
 }
+.box_style {
+  border: 1px solid #fef1e8;
+}
 .time_digit {
   height: 45px;
   padding: 0 20px;
   background-color: white;
+  line-height: 45px;
   position: relative;
 }
 .time_digit .position_p {
   position: absolute;
   left: -110px;
-}
-.time_digit p {
-  line-height: 45px;
 }
 section {
   height: 30vw;
