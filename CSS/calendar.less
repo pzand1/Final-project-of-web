@@ -8,12 +8,16 @@
     --main-white: rgb(255, 255, 255);
     --main-gray: rgb(247, 247, 247);
 }
-main {
+.main {
     max-width: 600px;
     min-width: 200px;
     width: 30vw;
-    margin: 0 auto;
-    background-color: var(--main-bgc);
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 9999;
 }
 
 .time_digit {
@@ -25,13 +29,12 @@ main {
 
     .position_p {
         position: absolute;
-        left: -110px;
-        
+        left: -8rem;
+        color: var(--main-white);
     }
 }
 
 section {
-    height: 30vw;
     margin-top: 20px;
 }
 
