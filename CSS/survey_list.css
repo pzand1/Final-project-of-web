@@ -1,3 +1,4 @@
+
 .basic{
     margin: 100px auto;
     width: 70%;
@@ -14,6 +15,11 @@
     display: inline;
 }
 
+.head{
+    padding: 0px 20px 20px 45px;
+    background-color:rgb(239,239,239);
+}
+
 .head button{
     background-color: rgb(238,116,25);
     color: white;
@@ -24,35 +30,57 @@
 .content{
     background-color: white;
     height: 200px;
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 .content button{
-    width: 50px;
-    height: 20px;
+    width: 60px;
+    height: 30px;
     font-size: 10px;
+    border-width: 1px;
 }
 
- ul:active{
-    background-color: rgb(#FCF0E5);
+
+.content ul{
+    height: 50px;
+    position: relative;
 }
 
-hr{
-    margin: 10px;
+.content ul li{
+    text-align: 30px;
+    position: relative;
+    top: 16px;
 }
-/* .content li{
-    display: flex;
-    justify-content: space-between;
-} */
+
+.content ul li span{
+    font-size: 15px;
+    width: 20%;
+    float: left;
+}
+.content ul div{
+    display: inline-block;
+    position: absolute;
+    right: 20%;
+    transform: translateY(40%); /*设置居中*/
+}
+
+ ul:hover{
+    background-color:rgb(238,116,25,0.3);
+}
+
+.content button:active{
+    background-color: rgb(238,116,25,0.5);
+    color: white;
+}
 
 
-
-
-
-
-
-
-
+/* 修改删除按钮的位置 */
+#deleteAll{
+    text-align: 30px;
+    position: relative;
+    top: 14px;
+    margin-left: 10px;
+}
 
 
 
@@ -71,6 +99,9 @@ input{
     text-align: center;
     line-height: 10px;
     border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+    transform: translateY(50%); /*设置竖直居中*/
 }
 input:after{
     content: '\2714';
@@ -78,4 +109,8 @@ input:after{
 }
 input:checked::after{
     color: black;
+}
+
+.select{
+    margin-top: 5px;
 }

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问卷查看页</title>
+    <link rel="stylesheet" href="../font_3828356_mxn67qfli8h/iconfont.css">
+    <link rel="stylesheet" href="../font_3828356_l18ug3n7gg/iconfont.css">
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/view_survey.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <span class="spacer"></span>
+        <span class="iconfont icon-iconfontwenhao1 wenhao"></span>
+        <span class="title1"><b> 问卷管理</b></span>
+        <span class="spacer"></span>
+        <span class="title2">我的问卷</span>
+    </div>
+    <!-- 返回的类名叫back -->
+    <div class="content">
+        <span class="iconfont icon-fanhui1 back1">  返回</span>
+        <h2>这里是标题</h1>
+        <p>此统计分析只包含完整回收的数据</p>
+        <hr>
+        <!-- 一个问题一个box -->
+        <div class="box">
+            <!-- number是第几个问题，type是问题类型 ,date是数据占比-->
+            <div class="number">Q1</div>
+            <div class="type">
+                <span>单选题</span>
+                <span>选项一</span>
+                <span>选项二</span> 
+            </div>
+            <div class="date">
+                <!-- span的这个内联样式只用于更改行距 -->
+                <span style="display: block;margin-bottom: 15px;">数据占比</span>
+                <div class="one">
+                    <div class="big">
+                        <!-- have代表占比 -->
+                        <div class="have"></div>   
+                    </div>
+                    <span>85%</span>
+                </div>
+
+                <div class="two">
+                    <div class="big">
+                        <!-- have代表占比 -->
+                        <div class="have"></div>   
+                    </div>
+                    <span>15%</span>
+                </div>
+            </div>           
+            <div style="clear:both"></div>
+        </div>
+
+        <!-- 分割线第二个问题,饼图js那边生成的 -->
+        <div class="box">
+            <!-- number是第几个问题，type是问题类型 ,date是数据占比-->
+            <div class="number">Q2</div>
+            <div class="type">
+                <span>多选题</span>
+                <span>选项一</span>
+                <span>选项二</span> 
+                <span>选项三</span>
+                <span>选项四</span> 
+            </div>
+            <div class="date">
+                <span style="display: block;margin-bottom: 15px;">数据占比</span>
+                <!-- 饼图！！ -->
+            </div>           
+            <div style="clear:both"></div>
+        </div>
+        
+        <!-- 第三个问题 -->
+        <div class="box">
+            <!-- number是第几个问题，type是问题类型 ,date是数据占比-->
+            <div class="number">Q3</div>
+            <div class="type">
+                <span>单选题</span>
+                <span>选项一</span>
+                <span>选项二</span> 
+            </div>
+            <div class="date">
+                <span style="display: block;margin-bottom: 15px;">数据占比</span>
+                <div class="one">
+                    <div class="big">
+                        <!-- have代表占比 -->
+                        <div class="have"></div>   
+                    </div>
+                    <span>85%</span>
+                </div>
+
+                <div class="two">
+                    <div class="big">
+                        <!-- have代表占比 -->
+                        <div class="have"></div>   
+                    </div>
+                    <span>15%</span>
+                </div>
+            </div>           
+            <div style="clear:both"></div>
+        </div>
+
+        <!-- 第四个问题 -->
+        <div class="box">
+            <!-- number是第几个问题，type是问题类型 ,date是数据占比-->
+            <div class="number">Q4</div>
+            <div class="type">
+                <span>文本题</span>
+            </div>
+            <div class="date">
+                <span style="display: block;margin-bottom: 15px;">有效回答占比</span>
+                <div class="one">
+                    <div class="big">
+                        <!-- have代表占比 -->
+                        <div class="have"></div>   
+                    </div>
+                    <span>85%</span>
+                </div>
+
+            </div>           
+            <div style="clear:both"></div>
+        </div>
+
+        <hr>
+        <button class="back2"><span class="iconfont icon-fanhui1">  返回</span></button>
+    </div>
+</body>
+</html>
