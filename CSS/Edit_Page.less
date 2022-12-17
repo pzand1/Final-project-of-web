@@ -4,51 +4,16 @@
 @context_indent: 20px;
 @firstDivHeight: 45px;
 
-* {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
+header {
+    margin: 0 @context_indent;
+    height: @header_heght;
+    line-height: @header_heght;
+    text-align: center;
 
-body {
-    box-sizing: border-box;
-    background-color: rgb(239, 239, 239);
-}
-
-.nav {
-    height: 35px;
-    background-color: rgb(238, 116, 25);
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 18px;
-
-    .spacer {
-        width: 5%;
+    h1 {
+        font-size: 20px;
+        font-weight: 600;
     }
-}
-
-main {
-    max-width: 900px;
-    min-width: 600px;
-    width: @main_wigth;
-    margin: 0 auto;
-    padding: @context_height;
-    background-color: white;
-
-    header {
-        margin: 0 @context_indent;
-        height: @header_heght;
-        line-height: @header_heght;
-        text-align: center;
-
-        h1 {
-            font-size: 20px;
-            font-weight: 600;
-        }
-    }
-
 }
 
 .hr {
@@ -56,14 +21,6 @@ main {
     border-bottom: 2px solid rgb(204, 204, 204);
 }
 
-.box_style {
-    border: 1px solid rgb(208, 210, 211);
-}
-
-.bottom:hover {
-    cursor: pointer;
-    background-color: rgb(254, 241, 232);
-}
 //添加问卷
 .choose {
     margin: @context_height @context_indent 0;
@@ -94,6 +51,7 @@ main {
         cursor: pointer;
     }
 }
+
 //保存修改功能
 .last {
     width: 100%;
@@ -142,6 +100,7 @@ main {
     margin: 5px 20px 0 6%;
     position: relative;
 }
+
 // 问卷题号
 .number {
     width: 6%;
@@ -152,6 +111,7 @@ main {
     position: absolute;
     left: -6%;
 }
+
 // 问卷题目
 .headContext {
     width: 100%;
@@ -170,6 +130,7 @@ main {
         float: right;
     }
 }
+
 // 问卷内容
 .aLineContext {
     height: 30px;
@@ -184,15 +145,18 @@ textarea {
     resize: none;
     outline: none;
 }
+
 // 题目功能栏
 .funtionMenu ul {
     height: 20px;
     line-height: 20px;
     font-size: 0.7rem;
+
     li {
         text-align: center;
         width: 5.5%;
         float: right;
+
         &:hover {
             background-color: rgb(238, 116, 25);
             cursor: pointer;

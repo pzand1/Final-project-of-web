@@ -1,0 +1,98 @@
+@lineHeight: 3rem;
+
+:root {
+    --main-origin: rgb(238, 116, 25);
+    --main-bgc: rgb(239, 239, 239);
+    --main-select: rgb(253, 241, 230);
+    --main-white: rgb(255, 255, 255);
+    --main-gray: rgb(247, 247, 247);
+}
+
+html {
+    font-size: 14px;
+}
+
+main {
+    margin: 60px auto;
+    padding: 0;
+    position: relative;
+}
+
+.addQuestionnaire {
+    width: 7.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    background-color: var(--main-origin);
+    color: var(--main-white);
+    position: relative;
+    left: 82%;
+    top: 2.5rem;
+    cursor: pointer;
+}
+
+table {
+    margin: 0 3% 0 7%;
+    width: 90%;
+    text-align: left;
+
+    tr {
+        height: @lineHeight;
+    }
+
+    th:nth-child(1) {
+        width: 25%;
+    }
+
+    th:nth-child(2) {
+        width: 25%;
+    }
+
+    th:nth-child(3) {
+        width: 10%;
+    }
+
+    th:nth-child(4) {
+        width: 40%;
+    }
+
+    td:nth-child(4) {
+        position: absolute;
+    }
+    td:nth-child(1) {
+        position: relative;
+        input {
+            position: absolute;
+            left: -20%;
+            top:35%;
+        }
+    }
+
+    span {
+        line-height: 1.5rem;
+        height: 1.5rem;
+        width: 4.5rem;
+        text-align: center;
+        background-color: var(--main-white);
+        display: inline-block;
+        position: relative;
+        top: 0.75rem;
+    }
+}
+ .fun {
+    height: 3rem;
+    line-height: 3rem;
+    width: 100%;
+    display: inline-block;
+    input {
+        margin: 0 1.34rem;
+    }
+    .delete {
+        height: 1.5rem;
+        line-height: 1.5rem;
+        display: inline-block;
+        width: 4rem;
+        text-align: center;
+        margin-left: 3%;
+    }
+ }

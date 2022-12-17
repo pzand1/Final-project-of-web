@@ -1,116 +1,85 @@
-
-.basic{
-    margin: 100px auto;
-    width: 70%;
+:root {
+  --main-origin: #ee7419;
+  --main-bgc: #efefef;
+  --main-select: #fdf1e6;
+  --main-white: #ffffff;
+  --main-gray: #f7f7f7;
 }
-
-.basic .head{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+html {
+  font-size: 14px;
 }
-
-.basic .content  li {
-    list-style-type:none;
-    display: inline;
+main {
+  margin: 60px auto;
+  padding: 0;
+  position: relative;
 }
-
-.head{
-    padding: 0px 20px 20px 45px;
-    background-color:rgb(239,239,239);
+.addQuestionnaire {
+  width: 7.5rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: var(--main-origin);
+  color: var(--main-white);
+  position: relative;
+  left: 82%;
+  top: 2.5rem;
+  cursor: pointer;
 }
-
-.head button{
-    background-color: rgb(238,116,25);
-    color: white;
-    width: 120px;
-    height: 30px;
+table {
+  margin: 0 3% 0 7%;
+  width: 90%;
+  text-align: left;
 }
-
-.content{
-    background-color: white;
-    height: 200px;
-    padding: 0px 20px 0px 20px;
+table tr {
+  height: 3rem;
 }
-
-.content button{
-    width: 60px;
-    height: 30px;
-    font-size: 10px;
-    border-width: 1px;
+table th:nth-child(1) {
+  width: 25%;
 }
-
-
-.content ul{
-    height: 50px;
-    position: relative;
+table th:nth-child(2) {
+  width: 25%;
 }
-
-.content ul li{
-    text-align: 30px;
-    position: relative;
-    top: 16px;
+table th:nth-child(3) {
+  width: 10%;
 }
-
-.content ul li span{
-    font-size: 15px;
-    width: 20%;
-    float: left;
+table th:nth-child(4) {
+  width: 40%;
 }
-.content ul div{
-    display: inline-block;
-    position: absolute;
-    right: 20%;
-    transform: translateY(40%); /*设置居中*/
+table td:nth-child(4) {
+  position: absolute;
 }
-
- ul:hover{
-    background-color:rgb(238,116,25,0.3);
+table td:nth-child(1) {
+  position: relative;
 }
-
-.content button:active{
-    background-color: rgb(238,116,25,0.5);
-    color: white;
+table td:nth-child(1) input {
+  position: absolute;
+  left: -20%;
+  top: 35%;
 }
-
-
-/* 修改删除按钮的位置 */
-#deleteAll{
-    text-align: 30px;
-    position: relative;
-    top: 14px;
-    margin-left: 10px;
+table span {
+  line-height: 1.5rem;
+  height: 1.5rem;
+  width: 4.5rem;
+  text-align: center;
+  background-color: var(--main-white);
+  display: inline-block;
+  position: relative;
+  top: 0.75rem;
 }
-
-
-
-
-
-
-
-
-
-
-input{
-    appearance: none;/* 清除掉自带的样式 */
-    width: 10px;
-    height: 10px;
-    border: 1px solid gray;
-    text-align: center;
-    line-height: 10px;
-    border-radius: 50%;
-    margin-right: 20px;
-    float: left;
-    transform: translateY(50%); /*设置竖直居中*/
+.fun {
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  display: inline-block;
 }
-input:after{
-    content: '\2714';
-    color: transparent;
+.fun input {
+  margin: 0 1.34rem;
 }
-input:checked::after{
-    color: black;
-}
-
-.select{
-    margin-top: 5px;
+.fun .delete {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  display: inline-block;
+  width: 4rem;
+  text-align: center;
+  margin-left: 3%;
 }

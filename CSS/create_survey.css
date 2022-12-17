@@ -1,6 +1,6 @@
 .create{
     margin: 50px auto;
-    width: 80%;
+    width: 70vw;
     height: 200px;
     background-color: white;
     display: flex;
@@ -8,9 +8,11 @@
     justify-content: center;
 }
 
-.create button{
+.create div{
     background-color: rgb(238,116,25);
     color: white;
-    width: 10%;
-    height: 20%;
+    width: 7rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
 }

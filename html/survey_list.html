@@ -13,65 +13,43 @@
 
 <body>
     <!-- 导航栏 -->
-    <div class="nav">
+    <nav class="nav">
         <span class="spacer"></span>
-        <span class="iconfont icon-iconfontwenhao1 wenhao1"></span>
-        <span class="title1"><b> 问卷管理</b></span>
+        <span class="iconfont icon-iconfontwenhao1"></span>
+        <span class="title1">&nbsp;问卷管理</span>
         <span class="spacer"></span>
         <span class="title2">我的问卷</span>
-    </div>
+    </nav>
 
     <!-- 問卷列表 -->
-    <div class="basic">
-        <div class="head">
-            <span>标题</span>
-            <span>时间</span>
-            <span>状态</span>
-            <span>操作</span>
-            <button><span class="iconfont icon-jiahao jiahao"></span> 新建问卷</button>
+    <main>
+        <div class="addQuestionnaire box_style"><span class="iconfont icon-jiahao"> </span> 新建问卷</div>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>标题</th>
+                    <th>时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="questionnaire1">这是一份问卷</td>
+                    <td>2016-03-12 20:46:52</td>
+                    <td>已发布</td>
+                    <td>
+                        <span class="bottom box_style">编辑</span>
+                        <span class="bottom box_style">删除</span>
+                        <span class="bottom box_style">查看数据</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="fun">
+            <input type="radio"><span>全选</span><span class="delete bottom box_style">删除</span>
         </div>
-        <div class="content">
-            <!-- 一个ul是一个问卷,下面加个hr横线 -->
-            <!-- publish是为了便于js修改，发布中就改颜色，未发布不变色 -->
-            <ul > 
-                <li id="first">
-                    <input type="checkbox">
-                    <span>这是我的第一份问卷</span>
-                    <span>2022.12.15</span>
-                    <span class="publish"> 未发布</span>
-                </li>
-                <div>
-                    <button>编辑</button>
-                    <button>删除</button>
-                    <button>查看数据</button>
-                </div>
-            </ul>
-            <hr>
-            <ul> 
-                <li>
-                    <input type="checkbox">
-                    <span>这是我的第一份问卷</span>
-                    <span>2022.12.15</span>
-                    <span class="publish"> 未发布</span>
-                </li>
-                <div>
-                  
-                    <button>编辑</button>
-                    <button>删除</button>
-                    <button>查看数据</button>
-                </div>
-            </ul>
-            <hr>
-            <!-- 下面是全选部分和删除 -->
-            <ul>
-                <li>
-                    <input type="checkbox" class="select"> <li>全选</li>
-                    <button id="deleteAll">删除</button>
-                </li>
-            </ul>
-            
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>

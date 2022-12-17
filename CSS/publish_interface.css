@@ -1,3 +1,11 @@
+:root {
+    --main-origin: rgb(238, 116, 25);
+    --main-bgc: rgb(239, 239, 239);
+    --main-select: rgb(253, 241, 230);
+    --main-white: rgb(255, 255, 255);
+    --main-gray: rgb(247, 247, 247);
+}
+
 body {
     background-color: rgb(143, 143, 143);
 }
@@ -5,9 +13,9 @@ body {
 .one {
     width: 450px;
     height: 200px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--main-white);
     margin: 200px auto;
-    border-radius: 10px;
+    border-radius: 5px;
     position: relative;
     font-weight: 100;
 }
@@ -15,8 +23,9 @@ body {
 .tip{
     width: 100%;
     height: 20%;
-    background-color: rgb(230, 230, 230);
-    border-radius: 10px;
+    background-color: var(--main-gray);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 b {
@@ -26,10 +35,10 @@ b {
 }
 
 .cha {
-    font-size: 30px;
+    font-size: 25px;
     position: absolute;
     right: 10px;
-    top: 2px;
+    top: 7px;
     color: rgb(143, 143, 143);
 }
 
@@ -47,23 +56,23 @@ span{
 }
 
 .yes{
-    width: 60px;
-    height: 30px;
+    width: 5rem;
+    height: 1.9rem;
+    line-height: 1.9rem;
+    text-align: center;
+    background-color: var(--main-origin);
     position: absolute;
     bottom: 20px;
-    left: 160px;
+    left: 105px;
+    cursor: pointer;
 }
 
 .no{
-    width: 60px;
-    height: 30px;
+    width: 5rem;
+    height: 1.9rem;
+    line-height: 1.9rem;
+    text-align: center;
     position: absolute;
     bottom: 20px;
-    right: 160px;
+    right: 105px;
 }
-
-button:hover{
-    color: white;
-    background-color: rgb(238,116,25);;
-}
-

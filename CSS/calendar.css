@@ -1,23 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-html {
-  box-sizing: border-box;
-  background-color: #efefef;
+:root {
+  --main-origin: #ee7419;
+  --main-bgc: #efefef;
+  --main-select: #fdf1e6;
+  --main-white: #ffffff;
+  --main-gray: #f7f7f7;
 }
 main {
+  max-width: 600px;
+  min-width: 200px;
   width: 30vw;
   margin: 0 auto;
-}
-.box_style {
-  border: 1px solid #fef1e8;
+  background-color: var(--main-bgc);
 }
 .time_digit {
   height: 45px;
   padding: 0 20px;
-  background-color: white;
+  background-color: var(--main-white);
   line-height: 45px;
   position: relative;
 }
@@ -35,7 +33,7 @@ section {
   line-height: 45px;
   text-align: center;
   color: white;
-  background-color: #f07600;
+  background-color: var(--main-origin);
 }
 .month_year::before {
   content: "";
@@ -43,7 +41,7 @@ section {
   width: 0;
   height: 0;
   border: 7px solid transparent;
-  border-bottom-color: #f07600;
+  border-bottom-color: var(--main-origin);
   top: -14px;
 }
 .month_year p {
@@ -55,7 +53,7 @@ section {
   width: 0;
   height: 0;
   border: 7px solid transparent;
-  border-right-color: white;
+  border-right-color: var(--main-white);
   top: 18px;
   left: 15px;
 }
@@ -65,7 +63,7 @@ section {
   width: 0;
   height: 0;
   border: 7px solid transparent;
-  border-left-color: white;
+  border-left-color: var(--main-white);
   top: 18px;
   right: 15px;
 }
@@ -74,21 +72,21 @@ table {
 }
 .thead_time {
   width: 100%;
-  background-color: #f07600;
+  background-color: var(--main-origin);
 }
 .thead_time .th {
   height: 30px;
   width: 4.28571429vw;
   line-height: 30px;
   font-weight: normal;
-  color: white;
+  color: var(--main-white);
 }
 .calWeekendDay {
-  border: #f8f8f8 solid 1px;
+  border: var(--main-gray) solid 1px;
   height: 45px;
   background-color: white;
   line-height: 45px;
   text-align: center;
   font-size: 19px;
-  color: #efefef;
+  color: var(--main-bgc);
 }
