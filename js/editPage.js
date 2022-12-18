@@ -19,6 +19,7 @@ window.addEventListener('load', function () {
     var dateTd = document.getElementsByTagName('td');
     var caledarDdl = this.document.getElementsByClassName('ddl')[0];
     var ddl = this.document.getElementsByClassName('ddl')[1];
+    var saveWinDdl = this.document.getElementsByClassName('date')[0];
 
     var zhe = document.getElementsByClassName('zhe')[0];
     var pubWin = this.document.getElementsByClassName('deleteQuestion')[0];
@@ -31,6 +32,7 @@ window.addEventListener('load', function () {
     caledarDdl.innerText = flag.getFullYear() + '-' + (flag.getMonth() + 1) + '-' + flag.getDate();
     ddl.innerText = caledarDdl.innerText;
     browDate.innerHTML = monthArr[flag.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + flag.getFullYear();
+    saveWinDdl.innerText = '(此问卷截止日期为' + ddl.innerText +')';
 
     // 显示和隐藏对话框
     clickNone(cha, zhe, pubWin);
@@ -116,6 +118,7 @@ window.addEventListener('load', function () {
         }
         caledarDdl.innerText = selectTime.getFullYear() + '-' + (selectTime.getMonth() + 1) + '-' + selectTime.getDate();
         ddl.innerText = caledarDdl.innerText;
+        saveWinDdl.innerText = '(此问卷截止日期为' + ddl.innerText +')';
         zhe.style.display = 'none';
         caledarWin.style.display = 'none';
     }
