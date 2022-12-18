@@ -9,24 +9,28 @@
   max-width: 600px;
   min-width: 200px;
   width: 30vw;
-  display: block;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
   z-index: 9999;
 }
-.time_digit {
-  height: 45px;
-  padding: 0 20px;
+.main .time_digit {
+  width: 100%;
+  margin: 0;
   background-color: var(--main-white);
   line-height: 45px;
   position: relative;
 }
-.time_digit .position_p {
+.main .time_digit .position_p {
   position: absolute;
-  left: -8rem;
+  left: -10rem;
   color: var(--main-white);
+}
+.main header {
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 section {
   margin-top: 20px;
@@ -46,12 +50,10 @@ section {
   height: 0;
   border: 7px solid transparent;
   border-bottom-color: var(--main-origin);
-  top: -14px;
+  top: -30%;
+  right: 48%;
 }
-.month_year p {
-  position: relative;
-}
-.month_year p::before {
+.month_year .beforeArrow {
   content: "";
   position: absolute;
   width: 0;
@@ -60,8 +62,9 @@ section {
   border-right-color: var(--main-white);
   top: 18px;
   left: 15px;
+  cursor: pointer;
 }
-.month_year p::after {
+.month_year .afterArrow {
   content: "";
   position: absolute;
   width: 0;
@@ -70,6 +73,7 @@ section {
   border-left-color: var(--main-white);
   top: 18px;
   right: 15px;
+  cursor: pointer;
 }
 table {
   width: 100%;
@@ -85,12 +89,25 @@ table {
   font-weight: normal;
   color: var(--main-white);
 }
-.calWeekendDay {
+td {
   border: var(--main-gray) solid 1px;
   height: 45px;
   background-color: white;
   line-height: 45px;
   text-align: center;
   font-size: 19px;
+}
+.calWeekendDay {
   color: var(--main-bgc);
+  cursor: not-allowed;
+}
+.canChoose {
+  cursor: pointer;
+  color: #000;
+}
+.canChoose:hover {
+  background-color: var(--main-select);
+}
+.kongzhi {
+  display: none;
 }

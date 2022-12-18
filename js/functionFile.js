@@ -24,3 +24,15 @@ function clickNone() {
         }
     })
 }
+
+function splitString(str){
+    var index = str.indexOf(" ");
+    var arr = [];
+    arr[0] = str.substring(0, index);
+    arr[1] = str.substring(7, str.length);
+    return arr;
+}
+
+var monthArr = ['一月', '二月', '三月', '四月', '五月', '六月', 
+'七月', '八月', '九月', '十月', '十一月', '十二月'];
+// var

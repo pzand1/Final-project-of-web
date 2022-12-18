@@ -8,29 +8,35 @@
     --main-white: rgb(255, 255, 255);
     --main-gray: rgb(247, 247, 247);
 }
+
 .main {
     max-width: 600px;
     min-width: 200px;
     width: 30vw;
-    display: block;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
     z-index: 9999;
-}
 
-.time_digit {
-    height: @firstDivHeight;
-    padding: 0 20px;
-    background-color: var(--main-white);
-    line-height: @firstDivHeight;
-    position: relative;
+    .time_digit {
+        width: 100%;
+        margin: 0;
+        background-color: var(--main-white);
+        line-height: @firstDivHeight;
+        position: relative;
 
-    .position_p {
-        position: absolute;
-        left: -8rem;
-        color: var(--main-white);
+        .position_p {
+            position: absolute;
+            left: -10rem;
+            color: var(--main-white);
+        }
+    }
+
+    header {
+        margin: 0;
+        padding: 0;
+        text-align: left;
     }
 }
 
@@ -46,7 +52,8 @@ section {
         height: 0;
         border: 7px solid transparent;
         border-bottom-color: var(--main-origin);
-        top: -14px;
+        top: -30%;
+        right: 48%;
     }
 
     position: relative;
@@ -56,30 +63,28 @@ section {
     color: white;
     background-color: var(--main-origin);
 
-    p {
-        position: relative;
+    .beforeArrow {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-right-color: var(--main-white);
+        top: 18px;
+        left: 15px;
+        cursor: pointer;
+    }
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border: 7px solid transparent;
-            border-right-color: var(--main-white);
-            top: 18px;
-            left: 15px;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border: 7px solid transparent;
-            border-left-color: var(--main-white);
-            top: 18px;
-            right: 15px;
-        }
+    .afterArrow {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-left-color: var(--main-white);
+        top: 18px;
+        right: 15px;
+        cursor: pointer;
     }
 }
 
@@ -101,13 +106,29 @@ table {
 
 }
 
-.calWeekendDay {
+td {
     border: var(--main-gray) solid 1px;
     height: 45px;
     background-color: white;
     line-height: 45px;
     text-align: center;
     font-size: 19px;
-    color: var(--main-bgc);
+}
 
+.calWeekendDay {
+    color: var(--main-bgc);
+    cursor: not-allowed;
+}
+
+.canChoose {
+    cursor: pointer;
+    color: #000;
+}
+
+.canChoose:hover {
+    background-color: var(--main-select);
+}
+
+.kongzhi {
+    display: none;
 }

@@ -37,7 +37,7 @@ main {
 .box_style {
   border: 1px solid #d0d2d3;
 }
-.bottom:hover {
+.buttom:hover {
   cursor: pointer;
   background-color: #fef1e8;
 }

@@ -15,15 +15,14 @@ header h1 {
 .choose {
   margin: 25px 20px 0;
   border: 1px solid #cccccc;
-  height: 140px;
   text-align: center;
 }
-.choose .choose_bottom {
+.choose .choose_buttom {
   margin: 19px 0;
   display: flex;
   justify-content: center;
 }
-.choose .choose_bottom div {
+.choose .choose_buttom div {
   margin: 0 19px;
   width: 10.73%;
   height: 35px;
@@ -31,7 +30,7 @@ header h1 {
   background-color: #efefef;
   cursor: pointer;
 }
-.choose .add_bottom {
+.choose .add_buttom {
   width: 100%;
   height: 67px;
   line-height: 67px;
@@ -42,20 +41,6 @@ header h1 {
   width: 100%;
   height: 30px;
   margin: 30px 0;
-}
-.last .time_digit {
-  width: 15vw;
-  height: 45px;
-  margin-left: 20%;
-  padding: 0 20px;
-  line-height: 45px;
-  background-color: white;
-  float: left;
-  position: relative;
-}
-.last .time_digit .position_p {
-  position: absolute;
-  left: -110px;
 }
 .last div:nth-child(2) {
   margin: 10px 10% 0 0;
@@ -74,6 +59,26 @@ header h1 {
   line-height: 30px;
   text-align: center;
   float: right;
+}
+.last .ddl:hover {
+  cursor: pointer;
+  background-color: --main-select;
+}
+.time_digit {
+  width: 16vw;
+  height: 45px;
+  margin-left: 20%;
+  line-height: 45px;
+  background-color: white;
+  float: left;
+  position: relative;
+}
+.time_digit P {
+  margin-left: 1.5rem;
+}
+.time_digit .position_p {
+  position: absolute;
+  left: -9.5rem;
 }
 .select {
   margin: 5px 20px 0 6%;

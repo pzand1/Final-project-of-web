@@ -25,10 +25,9 @@ header {
 .choose {
     margin: @context_height @context_indent 0;
     border: 1px solid rgb(204, 204, 204);
-    height: 140px;
     text-align: center;
 
-    .choose_bottom {
+    .choose_buttom {
         margin: 19px 0;
         display: flex;
         justify-content: center;
@@ -43,7 +42,7 @@ header {
         }
     }
 
-    .add_bottom {
+    .add_buttom {
         width: 100%;
         height: 67px;
         line-height: 67px;
@@ -57,22 +56,6 @@ header {
     width: 100%;
     height: 30px;
     margin: 30px 0;
-
-    .time_digit {
-        width: 15vw;
-        height: @firstDivHeight;
-        margin-left: 20%;
-        padding: 0 20px;
-        line-height: @firstDivHeight;
-        background-color: white;
-        float: left;
-        position: relative;
-
-        .position_p {
-            position: absolute;
-            left: -110px;
-        }
-    }
 
     div:nth-child(2) {
         margin: 10px 10% 0 0;
@@ -92,6 +75,29 @@ header {
         line-height: 30px;
         text-align: center;
         float: right;
+    }
+
+    .ddl:hover{
+        cursor: pointer;
+        background-color: --main-select;
+    }
+}
+
+.time_digit {
+    width: 16vw;
+    height: @firstDivHeight;
+    margin-left: 20%;
+    line-height: @firstDivHeight;
+    background-color: white;
+    float: left;
+    position: relative;
+
+    P{
+        margin-left: 1.5rem;
+    }
+    .position_p {
+        position: absolute;
+        left: -9.5rem;
     }
 }
 
