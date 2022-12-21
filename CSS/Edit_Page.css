@@ -4,24 +4,29 @@ header {
   line-height: 45px;
   text-align: center;
 }
+
 header h1 {
   font-size: 20px;
   font-weight: 600;
 }
+
 .hr {
   padding-top: 25px;
   border-bottom: 2px solid #cccccc;
 }
+
 .choose {
   margin: 25px 20px 0;
   border: 1px solid #cccccc;
   text-align: center;
 }
+
 .choose .choose_buttom {
   margin: 19px 0;
   display: flex;
   justify-content: center;
 }
+
 .choose .choose_buttom div {
   margin: 0 19px;
   width: 10.73%;
@@ -30,6 +35,7 @@ header h1 {
   background-color: #efefef;
   cursor: pointer;
 }
+
 .choose .add_buttom {
   width: 100%;
   height: 67px;
@@ -37,11 +43,13 @@ header h1 {
   background-color: #efefef;
   cursor: pointer;
 }
+
 .last {
   width: 100%;
   height: 30px;
   margin: 30px 0;
 }
+
 .last div:nth-child(2) {
   margin: 10px 10% 0 0;
   width: 11%;
@@ -52,6 +60,7 @@ header h1 {
   text-align: center;
   float: right;
 }
+
 .last div:nth-child(3) {
   margin: 10px 3% 0 0;
   width: 11%;
@@ -60,10 +69,12 @@ header h1 {
   text-align: center;
   float: right;
 }
+
 .last .ddl:hover {
   cursor: pointer;
   background-color: --main-select;
 }
+
 .time_digit {
   width: 16vw;
   height: 45px;
@@ -73,17 +84,22 @@ header h1 {
   float: left;
   position: relative;
 }
+
 .time_digit P {
   margin-left: 1.5rem;
 }
+
 .time_digit .position_p {
   position: absolute;
   left: -9.5rem;
 }
+
 .select {
   margin: 5px 20px 0 6%;
   position: relative;
+  padding: 10px;
 }
+
 .number {
   width: 6%;
   height: 30px;
@@ -92,45 +108,59 @@ header h1 {
   font-weight: 600;
   position: absolute;
   left: -6%;
+  margin-right: 10px;
 }
+
 .headContext {
   width: 100%;
   height: 30px;
   line-height: 30px;
 }
+
 .headContext .context {
   font-size: 1.2rem;
   font-weight: 600;
   float: left;
 }
+
 .headContext .must_choose {
   font-size: 0.9rem;
   font-weight: normal;
   float: right;
 }
+
 .aLineContext {
   height: 30px;
   line-height: 30px;
   font-size: 0.9rem;
 }
+
 textarea {
-  width: 100%;
+  width: 80%;
   height: 8rem;
   font-size: 0.9rem;
   resize: none;
   outline: none;
+  margin: 10px 10px 10px 40px;
 }
+
 .funtionMenu ul {
   height: 20px;
   line-height: 20px;
   font-size: 0.7rem;
 }
+
 .funtionMenu ul li {
   text-align: center;
   width: 5.5%;
   float: right;
 }
+
 .funtionMenu ul li:hover {
   background-color: #ee7419;
   cursor: pointer;
+}
+
+.select:hover {
+  background-color: var(--main-select);
 }

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../CSS/calendar.css">
     <script src="../js/editPage.js"></script>
     <script src="../js/functionFile.js"></script>
+    <script src="../js/save.js"></script>
     <title>Document</title>
 </head>
 
@@ -127,93 +128,99 @@
         <span class="title2">我的问卷</span>
     </div>
     <div style="padding: 25px 0;"></div>
+
     <main>
-        <header class="buttom">
-            <h1>这里是标题</h1>
+        <header>
+            <h1 ondblclick="ShowElement(this)">这里是标题</h1>
         </header>
 
         <div class="hr"></div>
         <div style="margin: 5px 0;"></div>
 
-        <ul>
+        <ul class="content">
             <li class="select">
                 <div class="number">Q1</div>
                 <ul>
                     <li class="headContext">
-                        <div class="context">单选题</div>
+                        <div class="context" >单选题</div>
                         <div class="must_choose">
                             <input type="checkbox" name="must_choose1" id="must_choose">
                             <label for="must_choose">&nbsp;&nbsp;此题是否必选</label>
                         </div>
                     </li>
                     <li class="aLineContext">
-                        <input type="radio" name="choose" id="choose1_1"><label for="choose1_1">&nbsp;&nbsp;选项一</label>
+                        <input type="radio" name="choose" id="choose1_1" disabled="disabled"><label for="choose1_1" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项一</label>
                     </li>
                     <li class="aLineContext">
-                        <input type="radio" name="choose" id="choose1_2"><label for="choose1_2">&nbsp;&nbsp;选项二</label>
+                        <input type="radio" name="choose" id="choose1_2" disabled="disabled"><label for="choose1_2" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项二</label>
                     </li>
                     <li class="funtionMenu">
                         <ul>
-                            <li>删除</li>
-                            <li>复用</li>
-                            <li>下移</li>
-                            <li>上移</li>
+                            <li onclick="cutOf(this)">删除</li>
+                            <li onclick="copy(this)">复用</li>
+                            <li onclick="moveDown(this)">下移</li>
+                            <li onclick="moveUp(this)">上移</li>
                         </ul>
                     </li>
                 </ul>
             </li>
-
             <li class="select">
-                <div class="number">Q1</div>
+                <div class="number">Q2</div>
                 <ul>
                     <li class="headContext">
-                        <div class="context">单选题</div>
+                        <div class="context">多选题</div>
                         <div class="must_choose">
                             <input type="checkbox" name="must_choose1" id="must_choose">
                             <label for="must_choose">&nbsp;&nbsp;此题是否必选</label>
                         </div>
                     </li>
                     <li class="aLineContext">
-                        <input type="checkbox" name="choose2" id="choose2_1"><label
-                            for="choose2_1">&nbsp;&nbsp;选项一</label>
+                        <input type="checkbox" name="choose2" id="choose2_1" disabled="disabled"><label
+                            for="choose2_1" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项一</label>
                     </li>
                     <li class="aLineContext">
-                        <input type="checkbox" name="choose2" id="choose2_2"><label
-                            for="choose2_2">&nbsp;&nbsp;选项二</label>
+                        <input type="checkbox" name="choose2" id="choose2_2" disabled="disabled"><label
+                            for="choose2_2" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项二</label>
                     </li>
                     <li class="funtionMenu">
                         <ul>
-                            <li>删除</li>
-                            <li>复用</li>
-                            <li>下移</li>
-                            <li>上移</li>
+                            <li onclick="cutOf(this)">删除</li>
+                            <li onclick="copy(this)">复用</li>
+                            <li onclick="moveDown(this)">下移</li>
+                            <li onclick="moveUp(this)">上移</li>
                         </ul>
                     </li>
                 </ul>
             </li>
-
             <li class="select">
                 <div class="number">Q3</div>
                 <ul>
                     <li class="headContext">
-                        <div class="context">单选题</div>
+                        <div class="context">文本题</div>
                         <div class="must_choose">
                             <input type="checkbox" name="must_choose1" id="must_choose">
                             <label for="must_choose">&nbsp;&nbsp;此题是否必选</label>
                         </div>
                     </li>
                     <li>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" onchange="change(this)" ></textarea>
+                    </li>
+                    <li class="funtionMenu">
+                        <ul>
+                            <li onclick="cutOf(this)">删除</li>
+                            <li onclick="copy(this)">复用</li>
+                            <li onclick="moveDown(this)">下移</li>
+                            <li onclick="moveUp(this)">上移</li>
+                        </ul>
                     </li>
                 </ul>
             </li>
         </ul>
-
         <section class="choose">
             <div class="choose_buttom">
                 <div class="buttom">单选</div>
                 <div class="buttom">多选</div>
-                <div class="buttom">文本域</div>
+                <div class="buttom">文本题</div>
             </div>
             <div class="buttom add_buttom">
                 <p>添加问题</p>
@@ -235,6 +242,9 @@
             </div>
         </div>
     </main>
+    <!-- <script>
+        save();
+    </script> -->
 </body>
 
 </html>

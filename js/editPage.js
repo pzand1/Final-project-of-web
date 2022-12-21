@@ -32,7 +32,7 @@ window.addEventListener('load', function () {
     caledarDdl.innerText = flag.getFullYear() + '-' + (flag.getMonth() + 1) + '-' + flag.getDate();
     ddl.innerText = caledarDdl.innerText;
     browDate.innerHTML = monthArr[flag.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + flag.getFullYear();
-    saveWinDdl.innerText = '(此问卷截止日期为' + ddl.innerText +')';
+    saveWinDdl.innerText = '(此问卷截止日期为' + ddl.innerText + ')';
 
     // 显示和隐藏对话框
     clickNone(cha, zhe, pubWin);
@@ -118,7 +118,7 @@ window.addEventListener('load', function () {
         }
         caledarDdl.innerText = selectTime.getFullYear() + '-' + (selectTime.getMonth() + 1) + '-' + selectTime.getDate();
         ddl.innerText = caledarDdl.innerText;
-        saveWinDdl.innerText = '(此问卷截止日期为' + ddl.innerText +')';
+        saveWinDdl.innerText = '(此问卷截止日期为' + ddl.innerText + ')';
         zhe.style.display = 'none';
         caledarWin.style.display = 'none';
     }
@@ -133,4 +133,149 @@ window.addEventListener('load', function () {
     addQuestionButton.addEventListener('click', function () {
         chooseButton.style.display = 'flex';
     })
+
+    //添加具体问题
+    var addQuestion1 = chooseButton.getElementsByTagName('div')[0];
+    var addQuestion2 = chooseButton.getElementsByTagName('div')[1];
+    var addQuestion3 = chooseButton.getElementsByTagName('div')[2];
+    var question1 = document.getElementsByClassName('select')[0].innerHTML;
+    var question2 = document.getElementsByClassName('select')[1].innerHTML;
+    var question3 = document.getElementsByClassName('select')[2].innerHTML;
+    window.cnd = 3;//定义成全局变量
+    addQuestion1.addEventListener('click', function () {
+        // 用了querySelector就没问题
+        cnd += 1;
+        var content = document.querySelector('.content');
+        content.innerHTML = content.innerHTML + '<li class="select">' + question1 + '</li>';
+        var number = document.getElementsByClassName('number')[cnd - 1];
+        number.innerHTML = 'Q' + cnd;
+        chooseButton.style.display = 'none';
+    })
+
+    addQuestion2.addEventListener('click', function () {
+        cnd += 1;
+        var content = document.querySelector('.content');
+        content.innerHTML = content.innerHTML + '<li class="select">' + question2 + '</li>';
+        var number = document.getElementsByClassName('number')[cnd - 1];
+        number.innerHTML = 'Q' + cnd;
+        chooseButton.style.display = 'none';
+    })
+
+    addQuestion3.addEventListener('click', function () {
+        cnd += 1;
+        var content = document.querySelector('.content');
+        content.innerHTML = content.innerHTML + '<li class="select">' + question3 + '</li>';
+        var number = document.getElementsByClassName('number')[cnd - 1];
+        number.innerHTML = 'Q' + cnd;
+        chooseButton.style.display = 'none';
+    })
+
+
+
 })
+
+
+// 设置文本框的innerHTML和value同步
+function change(element) {
+    element.innerHTML = element.value;
+}
+
+//设置点击文本动态编辑
+function ShowElement(element) {
+    var oldhtml = element.innerHTML;
+    var newobj = document.createElement('input');
+    newobj.type = 'text';
+    newobj.value = oldhtml;
+    newobj.onblur = function () {
+        //当触发时判断新增元素值是否为空，为空则不修改，并返回原有值 
+        element.innerHTML = this.value == oldhtml ? oldhtml : this.value;
+        //当触发时设置父节点的双击事件为ShowElement
+        element.setAttribute("ondblclick", "ShowElement(this);");
+    }
+    element.innerHTML = '';
+    element.appendChild(newobj);
+    newobj.setSelectionRange(0, oldhtml.length);
+    newobj.focus();
+    newobj.parentNode.setAttribute("ondblclick", "");
+
+}
+
+//上移功能
+function moveUp(element) {
+    var oUl = document.getElementsByClassName('content')[0];
+    var obj = element.parentNode.parentNode.parentNode.parentNode;
+    if (obj == oUl.children[0]) {
+        alert('不能上移了！');
+    } else {
+        //跳过空白字符
+        var obj1 = obj.previousSibling;
+        while (obj1.innerHTML == undefined) {
+            obj1 = obj1.previousSibling;
+        }
+        // 把obj插入到obj1前面
+        oUl.insertBefore(obj, obj1);
+        //更改问题编号
+        var quesNumber1 = obj.getElementsByTagName('div')[0];
+        var quesNumber2 = obj1.getElementsByTagName('div')[0];
+
+        var temp = quesNumber1.innerHTML;
+        quesNumber1.innerHTML = quesNumber2.innerHTML;
+        quesNumber2.innerHTML = temp;
+    }
+}
+
+//下移功能
+function moveDown(element) {
+    var oUl = document.getElementsByClassName('content')[0];
+    var obj = element.parentNode.parentNode.parentNode.parentNode;
+    if (obj == oUl.lastElementChild) {
+        alert('不能下移了！');
+    } else {
+        //跳过空白字符
+        var obj1 = obj.nextSibling;
+        while (obj1.innerHTML == undefined) {
+            obj1 = obj1.nextSibling;
+        }
+        // 把obj插入到obj1前面
+        oUl.insertBefore(obj1, obj);
+        //更改问题编号
+        var quesNumber1 = obj.getElementsByTagName('div')[0];
+        var quesNumber2 = obj1.getElementsByTagName('div')[0];
+
+        var temp = quesNumber1.innerHTML;
+        quesNumber1.innerHTML = quesNumber2.innerHTML;
+        quesNumber2.innerHTML = temp;
+    }
+}
+
+//复用功能
+function copy(element) {
+    cnd += 1;
+    var obj = element.parentNode.parentNode.parentNode.parentNode;
+    var content = document.querySelector('.content');
+    content.innerHTML = content.innerHTML + '<li class="select">' + obj.innerHTML + '</li>';
+    var number = document.getElementsByClassName('number')[cnd - 1];
+    number.innerHTML = 'Q' + cnd;
+}
+
+//删除功能
+function cutOf(element) {
+    cnd -= 1;
+    var ul = document.getElementsByClassName('content')[0].childNodes;
+    var obj = element.parentNode.parentNode.parentNode.parentNode;
+    var len = ul.length;
+    for (var i = 0; i < len; i++) {
+        if (ul[i] == obj) {
+            ul[i].parentNode.removeChild(ul[i]);
+            //更改后面的问题编号
+            for(var j = i;j < len;j++){
+                if(ul[j] != undefined && ul[j].innerHTML != undefined){
+                    var temp = ul[j].getElementsByTagName('div')[0];
+                    var a = parseInt(String(temp.innerHTML).slice(1,2)) - 1;
+                    temp.innerHTML = 'Q' + a;
+                }
+            }
+            break;
+        }
+    }
+}
