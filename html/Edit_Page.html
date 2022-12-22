@@ -144,15 +144,15 @@
                     <li class="headContext">
                         <div class="context" >单选题</div>
                         <div class="must_choose">
-                            <input type="checkbox" name="must_choose1" id="must_choose">
+                            <input type="checkbox" >
                             <label for="must_choose">&nbsp;&nbsp;此题是否必选</label>
                         </div>
                     </li>
                     <li class="aLineContext">
-                        <input type="radio" name="choose" id="choose1_1" disabled="disabled"><label for="choose1_1" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项一</label>
+                        <input type="radio" name="choose" id="choose1_1" disabled="disabled"><label for="choose1_1" class="substance" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项一</label>
                     </li>
                     <li class="aLineContext">
-                        <input type="radio" name="choose" id="choose1_2" disabled="disabled"><label for="choose1_2" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项二</label>
+                        <input type="radio" name="choose" id="choose1_2" disabled="disabled"><label for="choose1_2" class="substance" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项二</label>
                     </li>
                     <li class="funtionMenu">
                         <ul>
@@ -170,17 +170,25 @@
                     <li class="headContext">
                         <div class="context">多选题</div>
                         <div class="must_choose">
-                            <input type="checkbox" name="must_choose1" id="must_choose">
-                            <label for="must_choose">&nbsp;&nbsp;此题是否必选</label>
+                            <input type="checkbox">
+                            <label for="must_choose" >&nbsp;&nbsp;此题是否必选</label>
                         </div>
                     </li>
                     <li class="aLineContext">
                         <input type="checkbox" name="choose2" id="choose2_1" disabled="disabled"><label
-                            for="choose2_1" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项一</label>
+                            for="choose2_1" class="substance" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项一</label>
                     </li>
                     <li class="aLineContext">
                         <input type="checkbox" name="choose2" id="choose2_2" disabled="disabled"><label
-                            for="choose2_2" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项二</label>
+                            for="choose2_2" class="substance" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项二</label>
+                    </li>
+                    <li class="aLineContext">
+                        <input type="checkbox" name="choose2" id="choose2_2" disabled="disabled"><label
+                            for="choose2_2" class="substance" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项三</label>
+                    </li>
+                    <li class="aLineContext">
+                        <input type="checkbox" name="choose2" id="choose2_2" disabled="disabled"><label
+                            for="choose2_2" class="substance" ondblclick="ShowElement(this)" style="margin-left: 10px;">选项四</label>
                     </li>
                     <li class="funtionMenu">
                         <ul>
@@ -203,7 +211,7 @@
                         </div>
                     </li>
                     <li>
-                        <textarea name="" id="" cols="30" rows="10" onchange="change(this)" ></textarea>
+                        <textarea name="" id="" cols="30" rows="10" class="substance" onchange="change(this)" ></textarea>
                     </li>
                     <li class="funtionMenu">
                         <ul>
@@ -237,14 +245,12 @@
             <div class="box_style buttom lastButtom">
                 发布问卷
             </div>
-            <div class="box_style buttom lastButtom">
+            <div class="box_style buttom lastButtom" onclick="save()">
                 保存问卷
             </div>
         </div>
     </main>
-    <!-- <script>
-        save();
-    </script> -->
+
 </body>
 
 </html>

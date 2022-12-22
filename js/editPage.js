@@ -141,7 +141,7 @@ window.addEventListener('load', function () {
     var question1 = document.getElementsByClassName('select')[0].innerHTML;
     var question2 = document.getElementsByClassName('select')[1].innerHTML;
     var question3 = document.getElementsByClassName('select')[2].innerHTML;
-    window.cnd = 3;//定义成全局变量
+    this.window.cnd =  null? 3 : parseInt(localStorage.getItem('presentProblem'));
     addQuestion1.addEventListener('click', function () {
         // 用了querySelector就没问题
         cnd += 1;
@@ -268,10 +268,10 @@ function cutOf(element) {
         if (ul[i] == obj) {
             ul[i].parentNode.removeChild(ul[i]);
             //更改后面的问题编号
-            for(var j = i;j < len;j++){
-                if(ul[j] != undefined && ul[j].innerHTML != undefined){
+            for (var j = i; j < len; j++) {
+                if (ul[j] != undefined && ul[j].innerHTML != undefined) {
                     var temp = ul[j].getElementsByTagName('div')[0];
-                    var a = parseInt(String(temp.innerHTML).slice(1,2)) - 1;
+                    var a = parseInt(String(temp.innerHTML).slice(1)) - 1;
                     temp.innerHTML = 'Q' + a;
                 }
             }
@@ -279,3 +279,5 @@ function cutOf(element) {
         }
     }
 }
+
+
