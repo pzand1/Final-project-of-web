@@ -141,7 +141,11 @@ window.addEventListener('load', function () {
     var question1 = document.getElementsByClassName('select')[0].innerHTML;
     var question2 = document.getElementsByClassName('select')[1].innerHTML;
     var question3 = document.getElementsByClassName('select')[2].innerHTML;
-    this.window.cnd =  null? 3 : parseInt(localStorage.getItem('presentProblem'));
+    this.window.cnd = localStorage.getItem('presentProblem');
+    if(cnd == null){
+        cnd = 3;
+    }
+    cnd = parseInt(cnd);
     addQuestion1.addEventListener('click', function () {
         // 用了querySelector就没问题
         cnd += 1;
@@ -171,6 +175,47 @@ window.addEventListener('load', function () {
     })
 
 
+    ////加载初始数据
+    // if (localStorage.getItem('IsSave') == false || localStorage.getItem('IsSave') == null) {
+    //     localStorage.setItem('ProblemNumber', 3);
+    //     localStorage.setItem('presentProblem', 3);
+    //     return;
+    // }
+    // var h1 = document.getElementsByTagName('h1')[0];
+    // var ddl = document.getElementsByClassName('ddl');
+    // var date = document.getElementsByClassName('date')[0];
+    // var arr = document.getElementsByClassName('select');
+
+    // var a = localStorage.getItem('questionnaire');
+    // var b = JSON.parse(a);
+    
+    // h1.innerText = b.Title;
+    // ddl[0].innerHTML = b.Deadline;
+    // ddl[1].innerHTML = b.Deadline;
+    // date.innerHTML = '(此问卷截止日期为' + b.Deadline + ')';
+    // for (var i = 0; i < b.Question.length; i++) {
+    //     if (arr[i] == undefined) {
+    //         var li = document.createElement("li");
+    //         if (b.Question[i].Type == "文本题") {
+    //             li.innerHTML = arr[2].innerHTML;
+    //         } else if (b.Question[i].Type == "多选题") {
+    //             li.innerHTML = arr[1].innerHTML;
+    //         } else {
+    //             li.innerHTML = arr[0].innerHTML;
+    //         }
+    //         li.className = "select";
+    //         arr[i - 1].parentNode.append(li);
+    //     }
+    //     var number = arr[i].getElementsByTagName('div')[0];
+    //     var type = arr[i].getElementsByClassName('context')[0];
+    //     var brr = arr[i].getElementsByClassName('substance');
+
+    //     number.innerText = b.Question[i].Number;
+    //     type.innerText = b.Question[i].Type;
+    //     for (var j = 0; j < brr.length; j++) {
+    //         brr[j].innerText = b.Question[i].Content[j];
+    //     }
+    // }
 
 })
 

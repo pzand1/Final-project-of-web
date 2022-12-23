@@ -85,3 +85,8 @@ table span {
   text-align: center;
   margin-left: 3%;
 }
+
+
+.hide{
+  display: none;
+}

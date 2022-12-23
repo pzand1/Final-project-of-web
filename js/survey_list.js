@@ -1,5 +1,4 @@
 window.addEventListener('load', function () {
-    //添加问卷按钮
     var addQuestion = document.getElementsByClassName('addQuestionnaire');
     clickSkip(addQuestion[0], './Edit_Page.html');
 
@@ -25,6 +24,24 @@ window.addEventListener('load', function () {
             button[i].checked = allSelectButton.checked;
         }
     })
+
+
+    //加载页面内容
+    var select = this.document.getElementsByClassName('select');
+    var questionArray = JSON.parse(this.localStorage.getItem('questionArray'));
+    if (questionArray != null) {
+        for (var i = 0; i < questionArray.length; i++) {
+            var tr = this.document.createElement("tr");
+            tr.innerHTML = select[0].innerHTML;
+            var td = tr.getElementsByTagName('td');
+            td[0].innerHTML = td[0].innerHTML.slice(0, 45) + questionArray[i].Title;
+            td[1].innerHTML = questionArray[i].ReleseDate;
+            td[2].innerHTML = questionArray[i].IsPublish;
+            select[0].parentNode.append(tr);
+        }
+    }
+
+
 
     //具体问卷按钮功能
     var tbody = this.document.getElementsByTagName('tbody');

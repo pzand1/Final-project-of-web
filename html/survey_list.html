@@ -13,6 +13,7 @@
     <script src="../js/survey_list.js"></script>
     <script src="../js/functionFile.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/editPage.js"></script>
 </head>
 
 <body>
@@ -39,7 +40,7 @@
 
     <!-- 問卷列表 -->
     <main>
-        <div class="addQuestionnaire box_style"><span class="iconfont icon-jiahao"> </span> 新建问卷</div>
+        <div class="addQuestionnaire box_style" ><span class="iconfont icon-jiahao"> </span> 新建问卷</div>
         <table cellspacing="0">
             <thead>
                 <tr>
@@ -50,28 +51,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr select="0">
-                    <td><input type="checkbox" name="questionnaire1">这是一份问卷</td>
-                    <td>2016-03-12 20:46:52</td>
-                    <td>已发布</td>
-                    <td>
-                        <span class="bottom box_style">编辑</span>
-                        <span class="bottom box_style">删除</span>
-                        <span class="bottom box_style">查看数据</span>
-                    </td>
-                </tr>
-                <tr select="0">
-                    <td><input type="checkbox" name="questionnaire2">这是一份问卷</td>
-                    <td>2016-03-12 20:46:52</td>
-                    <td>已发布</td>
-                    <td>
-                        <span class="bottom box_style">编辑</span>
-                        <span class="bottom box_style">删除</span>
-                        <span class="bottom box_style">查看数据</span>
-                    </td>
-                </tr>
-                <tr select="0">
-                    <td><input type="checkbox" name="questionnaire3">这是一份问卷</td>
+                <tr select="0" class="select hide">
+                    <td><input type="checkbox" name="questionnaire1">你的第一份问卷</td>
                     <td>2016-03-12 20:46:52</td>
                     <td>已发布</td>
                     <td>
